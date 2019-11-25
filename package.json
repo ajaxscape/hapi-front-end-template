@@ -1,0 +1,38 @@
+{
+  "name": "hapi-front-end-template",
+  "version": "0.0.1",
+  "description": "Use defra common modules within a simple template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "build": "bin/build.sh",
+    "build:css": "bin/build-css.sh",
+    "postinstall": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaxscape/hapi-front-end-template.git"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "author": "Ben Surgison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajaxscape/hapi-front-end-template/issues"
+  },
+  "homepage": "https://github.com/ajaxscape/hapi-front-end-template#readme",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/joi": "^16.1.8",
+    "defra-hapi-modules": "git+https://github.com/DEFRA/defra-hapi-modules.git#master",
+    "defra-hapi-utils": "git+https://github.com/DEFRA/defra-hapi-utils.git#master",
+    "defra-logging-facade": "git+https://github.com/DEFRA/defra-logging-facade.git#master",
+    "govuk-frontend": "3.3.0",
+    "hapi-robots": "^3.2.0",
+    "js-yaml": "^3.13.1",
+    "node-sass": "4.13.0",
+    "nunjucks": "3.2.0"
+  }
+}
