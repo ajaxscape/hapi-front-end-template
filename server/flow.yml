@@ -1,0 +1,17 @@
+# =====================
+# ===== Main flow =====
+# =====================
+
+home:
+  path: "/"
+  handlers: home/home.handlers
+  pageHeading: Sample home page
+  view: home/home
+  next: status
+
+status:
+  path: "/status"
+  handlers: status/status.handlers
+  pageHeading: Sample status page
+  view: status/status
+  next: home
