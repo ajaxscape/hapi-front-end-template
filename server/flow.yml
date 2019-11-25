@@ -14,4 +14,12 @@ status:
   handlers: status/status.handlers
   pageHeading: Sample status page
   view: status/status
+  next: single-option
+
+single-option:
+  path: "/single-option"
+  handlers: single-option/single-option.handlers
+  pageHeading: Single option page
+  isQuestionPage: true
+  view: common/select-one-option
   next: home
