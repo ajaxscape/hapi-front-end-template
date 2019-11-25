@@ -2,9 +2,9 @@
   "name": "hapi-front-end-template",
   "version": "0.0.1",
   "description": "Use defra common modules within a simple template",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node server/index",
     "build": "bin/build.sh",
     "build:css": "bin/build-css.sh",
     "postinstall": "npm run build",
@@ -34,5 +34,8 @@
     "js-yaml": "^3.13.1",
     "node-sass": "4.13.0",
     "nunjucks": "3.2.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }
