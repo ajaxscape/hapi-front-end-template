@@ -23,3 +23,14 @@ single-option:
   isQuestionPage: true
   view: common/select-one-option
   next: home
+
+
+# ======================
+# ==== Support flow ====
+# ======================
+
+version:
+  path: "/version"
+  handlers: version/version.handlers
+  pageHeading: Version
+  view: version/version
