@@ -1,14 +1,13 @@
+const { Cache } = require('defra-hapi-utils')
 
 class SingleOptionHandlers extends require('defra-hapi-modules').option.single.handlers {
   get Model () {
     return {
-      get: () => {
-        // Clone the data
-        const { ...data } = this._data || {}
-        return data
+      get: async (request) => {
+        return Cache.get(request, this.constructor.name) || {}
       },
-      set: (data) => {
-        this._data = data
+      set: async (request, data) => {
+        return Cache.set(request, this.constructor.name, data)
       }
     }
   }
@@ -38,6 +37,11 @@ class SingleOptionHandlers extends require('defra-hapi-modules').option.single.h
   async handleGet (request, h, errors) {
     this.viewData = { greeting: 'My single option' }
     return super.handleGet(request, h, errors)
+  }
+
+  // Overrides parent class handlePost
+  async handlePost (request, h) {
+    return super.handlePost(request, h)
   }
 }
 

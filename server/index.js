@@ -22,6 +22,7 @@ async function registerPlugins (server) {
     require('./plugins/public'),
     require('./plugins/robots'),
     require('./plugins/flow'),
+    require('./plugins/cache'),
     require('./plugins/error-pages'),
     require('./plugins/crumb'),
     require('./plugins/logging'),
