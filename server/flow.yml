@@ -7,6 +7,13 @@ home:
   handlers: home/home.handlers
   pageHeading: Sample home page
   view: home/home
+  next: hello-world
+
+hello-world:
+  path: "/hello-world"
+  handlers: hello-world/hello-world.handlers
+  pageHeading: Hello world page
+  view: hello-world/hello-world
   next: status
 
 status:
@@ -22,7 +29,7 @@ single-option:
   pageHeading: Single option page
   isQuestionPage: true
   view: common/select-one-option
-  next: home
+  next: hello-world
 
 
 # ======================

@@ -1,8 +1,13 @@
+const { Cache } = require('defra-hapi-utils')
+
 class HomeHandlers extends require('defra-hapi-modules').handlers {
-  // Overrides parent class handleGet
   async handleGet (request, h, errors) {
-    this.viewData = { greeting: 'Hello world' }
-    return super.handleGet(request, h, errors)
+    // Clear the cookies and create a new registration
+    await Cache.clear(request)
+
+    const nextPath = await this.getNextPath(request)
+
+    return h.redirect(nextPath)
   }
 }
 
