@@ -29,6 +29,10 @@ class SingleOptionHandlers extends require('defra-hapi-modules').option.single.h
       {
         value: 'no',
         text: 'No'
+      },
+      {
+        value: 'either',
+        text: 'Either'
       }
     ]
   }
