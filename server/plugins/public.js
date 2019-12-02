@@ -1,7 +1,5 @@
-const plugins = require('defra-hapi-modules').plugins
-
 module.exports = {
-  plugin: plugins.public,
+  plugin: require('hapi-public-route'),
   options: {
     path: '/assets/{path*}',
     directories: [
@@ -10,6 +8,8 @@ module.exports = {
       'node_modules/govuk-frontend/govuk',
       'node_modules/govuk-frontend/govuk/assets'
     ],
-    tags: ['asset', 'always']
+    options: {
+      tags: ['asset', 'always']
+    }
   }
 }
