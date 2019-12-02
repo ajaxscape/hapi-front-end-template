@@ -12534,9 +12534,9 @@
       "integrity": "sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ=="
     },
     "hapi-public-route": {
-      "version": "0.1.1",
-      "resolved": "https://registry.npmjs.org/hapi-public-route/-/hapi-public-route-0.1.1.tgz",
-      "integrity": "sha512-nD6miqSYyhhgAw7cN40PpRMjbIk5NPI/FOWoD5k83nlaIr7s36OnktdH8gQfEWWBgT9ZQMJVux9g+NdSB5Zbmw=="
+      "version": "0.1.2",
+      "resolved": "https://registry.npmjs.org/hapi-public-route/-/hapi-public-route-0.1.2.tgz",
+      "integrity": "sha512-Fqk+ljzXrLbjymAuGYJ3loSj5q554tl3heXPW28+MN4lcHyMRADbi9MIeyKFj/75mtxWkC7bgpd+NJiJzk3lhQ=="
     },
     "hapi-robots": {
       "version": "3.2.0",
