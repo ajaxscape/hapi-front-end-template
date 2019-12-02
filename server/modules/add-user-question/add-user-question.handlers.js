@@ -25,8 +25,8 @@ class AddUserQuestionHandlers extends require('../common/select-one-option.handl
   }
 
   async userRequired (request) {
-    const result = await this.Model.get(request, this.fieldname)
-    return result[this.fieldname]
+    const model = await this.Model.get(request, this.objectName)
+    return model[this.fieldname]
   }
 }
 
