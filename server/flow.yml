@@ -21,14 +21,25 @@ status:
   handlers: status/status.handlers
   pageHeading: Sample status page
   view: status/status
-  next: single-option
+  next: add-user-question
 
-single-option:
-  path: "/single-option"
-  handlers: single-option/single-option.handlers
-  pageHeading: Single option page
+add-user-question:
+  path: "/add-user-question"
+  handlers: add-user-question/add-user-question.handlers
+  pageHeading: Do you want to add a user?
   isQuestionPage: true
   view: common/select-one-option
+  next:
+    query: userRequired
+    result:
+      yes: user-name
+      no: hello-world
+
+user-name:
+  path: "/user-name"
+  handlers: user/user-name.handlers
+  pageHeading: Please enter the user's name
+  view: user/user-name
   next: hello-world
 
 
