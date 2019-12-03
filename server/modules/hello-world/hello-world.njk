@@ -1,5 +1,23 @@
 {% extends 'two-thirds-layout.njk' %}
 
+{% from "input/macro.njk" import govukInput %}
+
 {% block formContent %}
-  <p>{{ viewData.greeting }}</p>
+  {{ govukInput({
+    label: {
+      text: "Username"
+    },
+    id: "username",
+    name: "username",
+    type: "username"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Password"
+    },
+    id: "password",
+    name: "password",
+    type: "password"
+  }) }}
 {% endblock %}
