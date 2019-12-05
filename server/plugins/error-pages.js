@@ -1,12 +1,12 @@
-const { errorPages, routeFlow } = require('defra-hapi-modules').plugins
-let flow
-
 module.exports = {
-  plugin: errorPages,
+  plugin: require('defra-hapi-error-handling'),
   options: {
-    handleFailedPrecondition: (request, h) => {
-      flow = flow || routeFlow.flow()
-      return h.redirect(flow.home.path)
-    }
+    handleFailedPrecondition: async (request, h) => {
+      const { flow } = request.server.app
+      // Just redirect home for now
+      const route = await flow('home')
+      return h.redirect(route.path)
+    },
+    view: 'common/error'
   }
 }

@@ -1,6 +1,6 @@
 const { Cache } = require('defra-hapi-utils')
 
-class HomeHandlers extends require('defra-hapi-modules').handlers {
+class HomeHandlers extends require('defra-hapi-handlers') {
   async handleGet (request, h, errors) {
     // Clear the cookies and create a new registration
     await Cache.clear(request)

@@ -1,6 +1,6 @@
 const { Cache } = require('defra-hapi-utils')
 
-class UserNameHandlers extends require('defra-hapi-modules').person.name.handlers {
+class UserNameHandlers extends require('../common/person/name/person-name.handlers') {
   get Person () {
     return {
       get: async (request) => {

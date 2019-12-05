@@ -18,10 +18,10 @@ const serverOptions = {
 async function registerPlugins (server) {
   await server.register([
     require('@hapi/inert'),
-    require('./plugins/views'),
-    require('./plugins/public'),
-    require('./plugins/robots'),
+    require('./plugins/frontend'),
+    require('./plugins/version'),
     require('./plugins/flow'),
+    require('./plugins/robots'),
     require('./plugins/cache'),
     require('./plugins/error-pages'),
     require('./plugins/crumb'),
