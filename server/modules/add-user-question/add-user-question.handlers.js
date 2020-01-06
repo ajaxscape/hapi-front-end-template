@@ -1,4 +1,4 @@
-class AddUserQuestionHandlers extends require('../common/select-one-option.handlers') {
+class AddUserQuestionHandlers extends require('../common/option/single/single-option.handlers') {
   get objectName () {
     return 'Application'
   }

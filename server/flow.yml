@@ -5,50 +5,39 @@
 home:
   path: "/"
   handlers: home/home.handlers
-  pageHeading: Sample home page
+  title: Sample home page
   view: home/home
   next: hello-world
 
 hello-world:
   path: "/hello-world"
   handlers: hello-world/hello-world.handlers
-  pageHeading: Hello world page
+  title: Hello world page
   view: hello-world/hello-world
   next: status
 
 status:
   path: "/status"
   handlers: status/status.handlers
-  pageHeading: Sample status page
+  title: Sample status page
   view: status/status
   next: add-user-question
 
 add-user-question:
   path: "/add-user-question"
   handlers: add-user-question/add-user-question.handlers
-  pageHeading: Do you want to add a user?
+  title: Do you want to add a user?
   isQuestionPage: true
-  view: common/select-one-option
+  view: common/option/single/single-option
   next:
     query: userRequired
-    result:
+    when:
       yes: user-name
       no: hello-world
 
 user-name:
   path: "/user-name"
   handlers: user/user-name.handlers
-  pageHeading: Please enter the user's name
-  view: user/user-name
+  title: Please enter the user's name
+  view: common/person/name/person-name
   next: hello-world
-
-
-# ======================
-# ==== Support flow ====
-# ======================
-
-version:
-  path: "/version"
-  handlers: version/version.handlers
-  pageHeading: Version
-  view: version/version
