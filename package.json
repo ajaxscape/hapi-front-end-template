@@ -43,7 +43,7 @@
     "hapi-robots": "^3.2.0",
     "hapi-version-status": "^2.0.1",
     "js-yaml": "^3.13.1",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "nunjucks": "3.2.0"
   },
   "devDependencies": {
